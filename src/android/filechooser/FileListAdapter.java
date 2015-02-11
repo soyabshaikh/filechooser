@@ -25,7 +25,7 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.cordova;
+
 /**
  * List adapter for Files.
  * 
@@ -34,10 +34,10 @@ import org.apache.cordova;
  */
 public class FileListAdapter extends BaseAdapter {
 
-    private final static int ICON_FOLDER = cordova.getActivity().getResources().getIdentifier("ic_folder", "drawable", cordova.getActivity().getPackageName());
+    private final static int ICON_FOLDER = this.cordova.getActivity().getResources().getIdentifier("ic_folder", "drawable", cordova.getActivity().getPackageName());
 
     
-    private final static int ICON_FILE = cordova.getActivity().getResources().getIdentifier("ic_file", "drawable", cordova.getActivity().getPackageName());
+    private final static int ICON_FILE = this.cordova.getActivity().getResources().getIdentifier("ic_file", "drawable", cordova.getActivity().getPackageName());
 
     private final LayoutInflater mInflater;
 
@@ -102,7 +102,7 @@ public class FileListAdapter extends BaseAdapter {
         View row = convertView;
 
         if (row == null)
-            row = mInflater.inflate(cordova.getActivity().getResources().getIdentifier("file", "layout", cordova.getActivity().getPackageName()));
+            row = mInflater.inflate(this.cordova.getActivity().getResources().getIdentifier("file", "layout", cordova.getActivity().getPackageName()));
 
         TextView view = (TextView) row;
 
