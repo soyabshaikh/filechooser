@@ -26,8 +26,11 @@ import android.view.View;
 import android.widget.ListView;
 import java.io.File;
 import java.util.List;
-import org.apache.cordova.CordovaPlugin; 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
+import android.app.Activity;
 /**
  * Fragment that displays a list of Files in a given path.
  * 
