@@ -58,7 +58,7 @@ public class LocalStorageProvider extends DocumentsProvider {
         row.add(Root.COLUMN_DOCUMENT_ID, homeDir.getAbsolutePath());
         row.add(Root.COLUMN_TITLE, "Internal storage");
         row.add(Root.COLUMN_FLAGS, Root.FLAG_LOCAL_ONLY | Root.FLAG_SUPPORTS_CREATE);
-        row.add(Root.COLUMN_ICON, this.cordova.getActivity().getResources().getIdentifier("ic_provider", "drawable", this.cordova.getActivity().getPackageName()));
+        row.add(Root.COLUMN_ICON, this.cordova.getActivity().getResources().getIdentifier("ic_provider", "drawable", "io.circuitmouse.app"));
         // These columns are optional
         row.add(Root.COLUMN_AVAILABLE_BYTES, homeDir.getFreeSpace());
         // Root.COLUMN_MIME_TYPE is another optional column and useful if you
