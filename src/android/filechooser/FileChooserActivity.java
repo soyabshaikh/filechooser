@@ -34,7 +34,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import java.io.File;
-
+import org.apache.cordova.CordovaPlugin; 
+import org.apache.cordova.PluginResult;
 /**
  * Main Activity that handles the FileListFragments
  *
