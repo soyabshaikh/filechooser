@@ -94,7 +94,7 @@ public class FileListFragment extends ListFragment implements
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        setEmptyText(getString('Empty Directory'));
+        setEmptyText(getString("Empty Directory"));
         setListAdapter(mAdapter);
         setListShown(false);
 
