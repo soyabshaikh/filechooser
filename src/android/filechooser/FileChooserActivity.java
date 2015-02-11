@@ -54,7 +54,7 @@ public class FileChooserActivity extends FragmentActivity implements
     private BroadcastReceiver mStorageListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(context, cordova.getActivity().getPackageName().R.string.storage_removed, Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"Storage was removed or unmounted.", Toast.LENGTH_LONG).show();
             finishWithResult(null);
         }
     };
@@ -194,7 +194,7 @@ public class FileChooserActivity extends FragmentActivity implements
                 finishWithResult(file);
             }
         } else {
-            Toast.makeText(FileChooserActivity.this, cordova.getActivity().getPackageName().R.string.error_selecting_file,
+            Toast.makeText(FileChooserActivity.this, "Error selecting File",
                     Toast.LENGTH_SHORT).show();
         }
     }
