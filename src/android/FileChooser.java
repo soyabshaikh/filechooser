@@ -2,8 +2,6 @@ package com.cesidiodibenedetto.filechooser;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.cordova;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
