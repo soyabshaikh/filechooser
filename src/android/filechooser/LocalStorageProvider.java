@@ -15,7 +15,6 @@ import android.provider.DocumentsContract.Root;
 import android.provider.DocumentsProvider;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
-import io.circuitmouse.app.R;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -56,9 +55,9 @@ public class LocalStorageProvider extends DocumentsProvider {
         // These columns are required
         row.add(Root.COLUMN_ROOT_ID, homeDir.getAbsolutePath());
         row.add(Root.COLUMN_DOCUMENT_ID, homeDir.getAbsolutePath());
-        row.add(Root.COLUMN_TITLE, getContext().getString(R.string.internal_storage));
+        row.add(Root.COLUMN_TITLE, getContext().getString(cordova.getActivity().getPackageName().R.string.internal_storage));
         row.add(Root.COLUMN_FLAGS, Root.FLAG_LOCAL_ONLY | Root.FLAG_SUPPORTS_CREATE);
-        row.add(Root.COLUMN_ICON, R.drawable.ic_provider);
+        row.add(Root.COLUMN_ICON, cordova.getActivity().getPackageName().R.drawable.ic_provider);
         // These columns are optional
         row.add(Root.COLUMN_AVAILABLE_BYTES, homeDir.getFreeSpace());
         // Root.COLUMN_MIME_TYPE is another optional column and useful if you
