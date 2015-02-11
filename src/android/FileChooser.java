@@ -19,7 +19,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
-import io.circuitmouse.app.R;
+
 import com.ipaulpro.afilechooser.utils.FileUtils;
 
 /**
@@ -38,7 +38,7 @@ public class FileChooser extends CordovaPlugin {
         Intent target = FileUtils.createGetContentIntent();
         // Create the chooser Intent
         Intent intent = Intent.createChooser(
-                target, this.cordova.getActivity().getString(R.string.chooser_title));
+                target, this.cordova.getActivity().getString(cordova.getActivity().getPackageName().R.string.chooser_title));
         try {
             this.cordova.startActivityForResult((CordovaPlugin) this, intent, REQUEST_CODE);
         } catch (ActivityNotFoundException e) {
