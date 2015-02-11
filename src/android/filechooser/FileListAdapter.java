@@ -102,7 +102,7 @@ public class FileListAdapter extends BaseAdapter {
         View row = convertView;
 
         if (row == null)
-            row = mInflater.inflate(cordova.getActivity().getResources().getIdentifier("file", "layout", cordova.getActivity().getPackageName());
+            row = mInflater.inflate(cordova.getActivity().getResources().getIdentifier("file", "layout", cordova.getActivity().getPackageName()));
 
         TextView view = (TextView) row;
 
