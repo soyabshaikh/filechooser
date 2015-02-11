@@ -22,7 +22,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import io.circuitmouse.app.R;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +34,8 @@ import java.util.List;
  */
 public class FileListAdapter extends BaseAdapter {
 
-    private final static int ICON_FOLDER = R.drawable.ic_folder;
-    private final static int ICON_FILE = R.drawable.ic_file;
+    private final static int ICON_FOLDER = cordova.getActivity().getPackageName().R.drawable.ic_folder;
+    private final static int ICON_FILE = cordova.getActivity().getPackageName().R.drawable.ic_file;
 
     private final LayoutInflater mInflater;
 
@@ -101,7 +100,7 @@ public class FileListAdapter extends BaseAdapter {
         View row = convertView;
 
         if (row == null)
-            row = mInflater.inflate(R.layout.file, parent, false);
+            row = mInflater.inflate(cordova.getActivity().getPackageName().R.layout.file, parent, false);
 
         TextView view = (TextView) row;
 
