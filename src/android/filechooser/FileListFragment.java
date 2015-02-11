@@ -24,7 +24,6 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.view.View;
 import android.widget.ListView;
-import io.circuitmouse.app.R;
 import java.io.File;
 import java.util.List;
 
@@ -95,7 +94,7 @@ public class FileListFragment extends ListFragment implements
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        setEmptyText(getString(R.string.empty_directory));
+        setEmptyText(getString(cordova.getActivity().getPackageName().R.string.empty_directory));
         setListAdapter(mAdapter);
         setListShown(false);
 
