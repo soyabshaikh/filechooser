@@ -24,6 +24,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
 import android.app.Activity;
+import org.apache.cordova;
 public class LocalStorageProvider extends DocumentsProvider {
 
     public static final String AUTHORITY = "com.ianhanniballake.localstorage.documents";
@@ -61,7 +62,7 @@ public class LocalStorageProvider extends DocumentsProvider {
         row.add(Root.COLUMN_DOCUMENT_ID, homeDir.getAbsolutePath());
         row.add(Root.COLUMN_TITLE, "Internal storage");
         row.add(Root.COLUMN_FLAGS, Root.FLAG_LOCAL_ONLY | Root.FLAG_SUPPORTS_CREATE);
-        row.add(Root.COLUMN_ICON, this.getActivity().getResources().getIdentifier("ic_provider", "drawable", "io.circuitmouse.app"));
+        row.add(Root.COLUMN_ICON, cordova.getActivity().getResources().getIdentifier("ic_provider", "drawable", "io.circuitmouse.app"));
         // These columns are optional
         row.add(Root.COLUMN_AVAILABLE_BYTES, homeDir.getFreeSpace());
         // Root.COLUMN_MIME_TYPE is another optional column and useful if you
