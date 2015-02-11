@@ -55,7 +55,7 @@ public class LocalStorageProvider extends DocumentsProvider {
         // These columns are required
         row.add(Root.COLUMN_ROOT_ID, homeDir.getAbsolutePath());
         row.add(Root.COLUMN_DOCUMENT_ID, homeDir.getAbsolutePath());
-        row.add(Root.COLUMN_TITLE, getContext().getString("Internal storage"));
+        row.add(Root.COLUMN_TITLE, "Internal storage");
         row.add(Root.COLUMN_FLAGS, Root.FLAG_LOCAL_ONLY | Root.FLAG_SUPPORTS_CREATE);
         row.add(Root.COLUMN_ICON, cordova.getActivity().getResources().getIdentifier('ic_provider', "drawable", cordova.getActivity().getPackageName());
         // These columns are optional
