@@ -25,8 +25,11 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.cordova.CordovaPlugin; 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
+import android.app.Activity;
 /**
  * List adapter for Files.
  * 
