@@ -94,7 +94,7 @@ public class FileListFragment extends ListFragment implements
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        setEmptyText(getString(cordova.getActivity().getPackageName().R.string.empty_directory));
+        setEmptyText(getString('Empty Directory'));
         setListAdapter(mAdapter);
         setListShown(false);
 
