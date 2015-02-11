@@ -25,7 +25,7 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.apache.cordova;
 /**
  * List adapter for Files.
  * 
